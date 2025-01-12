@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+@font-face {
+    font-family: Karla;
+    src: url(/assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+/* Reset Start */
+
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+* {
+    transition: .25s;
+}
+
+p.error-required,
+p.error-valid__email {
+    font-size: .8rem;
+    color: var(--red);
+    display: none;
+}
+
+input {
+    font-size: .9rem;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Reset End */
+
+/* Custom Sets Start */
+
+
+label:not([type="radio"])::after {
+    content: " *";
+    color: var(--green-600);
+}
+
+label {
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--grey-900);
+}
+
+input:hover,
+.general-support__input:hover,
+.support-request__input:hover,
+label:hover, 
+button {
+    cursor: pointer;
+}
+
+.general-support__input:hover,
+.support-request__input:hover {
+    border-color: var(--green-600);
+}
+
+
+/* Custom Sets End */
+
+:root {
+    /* Primary Colors */
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral Colors */
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+}
+
+body {
+    font-family: Karla;
+    min-height: 100%;
+    background-color: var(--green-200);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 1rem;
+}
+
+.form-container {
+    display: grid;
+    margin-inline: .5rem;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: .85rem;
+}
+
+/* Form Style Start */
+
+.main-form {
+    display: grid;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--grey-900);
+}
+
+.name-input {
+    display: grid;
+    gap: 1rem;/
+}
+
+.first-name__input {
+    display: grid;
+    gap: .5rem;
+}
+
+.first-name__input input {
+    outline: 0;
+    border: 1px solid var(--grey-500);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+}
+
+.first-name__input input:hover {
+    border-color: var(--green-600);
+}
+
+.last-name__input {
+    display: grid;
+    gap: .5rem;
+}
+
+.last-name__input input {
+    outline: 0;
+    border: 1px solid var(--grey-500);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+}
+
+.last-name__input input:hover {
+    border-color: var(--green-600);
+}
+
+.email-input {
+    display: grid; 
+    gap: .75rem;
+}
+
+.email-address__input {
+    display: grid;
+    gap: .5rem;
+}
+
+.email-address__input input {
+    outline: 0;
+    border: 1px solid var(--grey-500);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+}
+
+.email-address__input input:hover {
+    border-color: var(--green-600);
+}
+
+.query-type__input {
+    display: grid;
+}
+
+.query-type__input:not(:last-child) {
+    gap: .75rem;
+}
+
+.query-type__input input[type="radio"] {
+    accent-color: var(--green-600);
+    color: var(--grey-500);
+}
+
+.general-support__input {
+    border: 1px solid var(--grey-500);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.support-request__input {
+    border: 1px solid var(--grey-500);
+    border-radius: .25rem;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.messages-input {
+    display: grid;
+    gap: .75rem;
+}
+
+.messages-input textarea {
+    resize: none;
+    height: 10ch;
+    border-radius: .25rem;
+    border: 1px solid var(--grey-500);
+    padding: .5rem 1rem;
+    outline: 0;
+}
+
+.messages-input textarea:hover {
+    cursor: pointer;
+    border-color: var(--green-600);
+}
+
+.consent-check {
+    display: grid;
+    gap: .5rem;
+}
+
+.consent-check__input{
+    display: flex;
+    gap: 1rem;
+}
+
+.consent-check__input input[type="checkbox"] {
+    accent-color: var(--green-600);
+}
+
+.submit-form__btn {
+    border: 0;
+    outline: 0;
+    border-radius: .25rem;
+    background-color: var(--green-600);
+    color: white;
+    padding-block: 1rem;
+}
+
+.submit-form__btn:hover {
+    background-color: var(--grey-900);
+}
+
+
+/* Form Style End */
+
+
+
+/* Desktop Design Resets Start */
+
+
+@media (min-width: 850px) {
+
+    .grid-span-2 {
+        grid-column: span 2;
+    }
+
+    .main-container {
+        margin: auto;
+    }
+
+    .form-container {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .main-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .name-input {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .submit-form__btn {
+        padding-block: .75rem;
+    }
+}
+
+
+
+/* Desktop Design Resets End */

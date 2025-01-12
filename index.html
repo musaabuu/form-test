@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="main-container">
+    <div class="form-container">
+      <!-- Form Start -->
+      <form action="#" class="main-form">
+        <h1>Contact Us</h1>
+        <!-- Name Input Start -->
+        <div class="name-input grid-span-2">
+          <div class="first-name__input">
+            <label for="input-first__name">First Name</label>
+            <input type="text" name="first_name" id="input-first__name">
+            <p class="error-required">This field is required</p>
+          </div>
+          <div class="last-name__input">
+            <label for="input-last__name">Last Name</label>
+            <input type="text" name="last_name" id="input-last__name">
+            <p class="error-required">This field is required</p>
+          </div>
+        </div>
+        <!-- Name Input End -->
+        <!-- Email Input Start -->
+        <div class="email-input grid-span-2">
+          <div class="email-address__input">
+            <label for="input-email__address">Email Address</label>
+            <input type="email" name="email_adress" id="input-email__adress">
+            <p class="error-required">This field is required</p>
+          </div>
+        </div>
+        <!-- Email Input End -->
+        <!-- Query-Type Input Start -->
+        <div class="query-type__input grid-span-2">
+          <label for="query-type" class="grid-span-2">Query Type</label>
+          <!-- General Support Start -->
+          <div class="general-support__input">
+            <input type="radio" name="type" id="radio-general__support" value="General Enquiry">
+            <label type="radio" for="radio-general__support">General Enquiry</label>
+          </div>
+          <!-- General Support End -->
+          <!-- Support Request Start -->
+          <div class="support-request__input">
+            <input type="radio" name="type" id="radio-support__request" value="Support Request">
+            <label type="radio" for="radio-support__request">Support Request</label>
+          </div>
+          <p class="error-required">This field is required</p>
+          <!-- Support Request End -->
+        </div>
+        <!-- Query-Type Input End -->
+        <!-- Message Input Start -->
+        <div class="messages-input grid-span-2">
+          <label for="input-messages">Message</label>
+          <textarea name="input_messages" id="input-messages"></textarea>
+          <p class="error-required">This field is required</p>
+        </div>
+        <!-- Message Input End -->
+        <!-- Consent Check Start -->
+        <div class="consent-check grid-span-2">
+          <div class="consent-check__input">
+            <input type="checkbox" name="check_consent" id="check-consent">
+            <label for="check-consent">I consent to being contacted by the team</label>
+          </div>
+          <p class="error-required">This field is required</p>
+        </div>
+        <!-- Consent Check End -->
+         <button class="submit-form__btn grid-span-2" id="submit-form" type="submit">Submit</button>
+      </form>
+      <!-- Form End -->
+    </div>
+  </main>
+  <!-- 
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <!-- Script -->
+  <script type="text/javascript" defer src="index.js" ></script>
+  <!-- Script -->
+</body>
+</html>
