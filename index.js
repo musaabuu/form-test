@@ -34,9 +34,9 @@ radios.forEach(radio => {
 submit.addEventListener('click', (event) => {
     event.preventDefault();
     checkInput();
-
+    success.classList.add('sucess');            
     setTimeout(() => {
-        success.classList.add("sucess");            
+        success.classList.remove("sucess");            
     }, 3000)
 });
 
