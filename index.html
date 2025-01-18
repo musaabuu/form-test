@@ -14,7 +14,15 @@
 </head>
 <body>
 
-  <main class="main-container">
+  <div class="success-message" id="success">
+    <div class="headding">
+      <img src="assets/images/icon-success-check.svg" alt="success check">
+      <h2>Message Sent!</h2>
+    </div>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+
+  <main class="main-container" id="container">
     <div class="form-container">
       <!-- Form Start -->
       <form action="#" class="main-form">
@@ -46,13 +54,13 @@
         <div class="query-type__input grid-span-2">
           <label for="query-type" class="grid-span-2">Query Type</label>
           <!-- General Support Start -->
-          <div class="general-support__input">
+          <div class="general-support__input" name="radio-input">
             <input type="radio" name="type" id="radio-general__support" value="General Enquiry">
             <label type="radio" for="radio-general__support">General Enquiry</label>
           </div>
           <!-- General Support End -->
           <!-- Support Request Start -->
-          <div class="support-request__input">
+          <div class="support-request__input" name="radio-input">
             <input type="radio" name="type" id="radio-support__request" value="Support Request">
             <label type="radio" for="radio-support__request">Support Request</label>
           </div>
@@ -81,17 +89,18 @@
       <!-- Form End -->
     </div>
   </main>
-  <!-- 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">MOSSAAB</a>.
+    </div>
+  </footer>
 
   <!-- Script -->
-  <script defer src="index.js" ></script>
+  <script type="text/javascript" defer src="index.js" ></script>
   <!-- Script -->
 </body>
 </html>
