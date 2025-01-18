@@ -18,11 +18,18 @@
     transition: .25s;
 }
 
+div:has(p.error-required) {
+    position: relative;
+}
+
 p.error-required,
 p.error-valid__email {
-    font-size: .8rem;
+    font-size: .7rem;
+    font-weight: 600;
     color: var(--red);
     display: none;
+    top: 100%;
+    position: absolute;
 }
 
 input {
@@ -32,6 +39,11 @@ input {
 textarea {
     resize: none;
 }
+
+label {
+    width: fit-content;
+}
+
 
 /* Reset End */
 
@@ -62,6 +74,13 @@ button {
     border-color: var(--green-600);
 }
 
+.success-message {
+    display: none;
+}
+
+input {
+    background-color: var(--white);
+}
 
 /* Custom Sets End */
 
@@ -79,8 +98,8 @@ button {
 
 body {
     font-family: Karla;
-    min-height: 100%;
     background-color: var(--green-200);
+    height: 100%;
 }
 
 .main-container {
@@ -88,6 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 1rem;
 }
 
 .form-container {
@@ -255,12 +275,16 @@ h1 {
 
 @media (min-width: 850px) {
 
+    body {
+        position: relative;
+    }
+
     .grid-span-2 {
         grid-column: span 2;
     }
 
     .main-container {
-        margin: auto;
+        margin: 0rem;
     }
 
     .form-container {
@@ -278,8 +302,42 @@ h1 {
     .submit-form__btn {
         padding-block: .75rem;
     }
+
+    .success-message {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);    
+        background-color: var(--grey-900);
+        padding: 1rem 2rem;
+        width: fit-content;
+        color: var(--white);
+        border-radius: .5rem;
+        display: none;
+        gap: 1rem;
+        z-index: 100;
+    }
+
+    .success-message p {
+        font-size: .9rem;
+    }
+
+    .headding {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
 
 
 /* Desktop Design Resets End */
+
+
+/* Js Styles Start */
+
+.background-active {
+    background-color: var(--green-200);
+}
+
+/* Js Styles End */
