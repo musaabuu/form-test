@@ -35,9 +35,8 @@ submit.addEventListener('click', (event) => {
     event.preventDefault();
     checkInput();
 
-    success.style.display = "grid";
     setTimeout(() => {
-        success.style.display = "none";            
+        success.classList.add("sucess");            
     }, 3000)
 });
 
